@@ -555,7 +555,7 @@ img {
 
 .top {
   height: 648px;
-  background: transparent url(../../img/mv.png) no-repeat center left/cover;
+  background: transparent url(../img/mv.png) no-repeat center left/cover;
 }
 
 @media (max-width: 1247px) {
@@ -570,7 +570,7 @@ img {
     height: 667px;
     padding-left: 16px;
     padding-right: 16px;
-    background: transparent url(../../img/mv.png) no-repeat 22% center/cover;
+    background: transparent url(../img/mv.png) no-repeat 22% center/cover;
   }
 }
 
@@ -749,7 +749,7 @@ img {
 .news .news-item a::after {
   content: "";
   position: absolute;
-  background: transparent url(../../img/news-arrow.png) no-repeat center center/contain;
+  background: transparent url(../img/news-arrow.png) no-repeat center center/contain;
   width: 22px;
   height: 24px;
   right: 10px;
@@ -1371,7 +1371,7 @@ img {
 .faq {
   margin-top: 120px;
   padding: 55px 0 120px;
-  background: url(../../img/qa-bg.png) fixed no-repeat center center/cover;
+  background: url(../img/qa-bg.png) fixed no-repeat center center/cover;
   position: relative;
   z-index: 1;
 }
@@ -1631,7 +1631,7 @@ img {
 
 .contact {
   margin-top: 120px;
-  background: transparent url(../../img/contact-bg.png) no-repeat center center/cover;
+  background: transparent url(../img/contact-bg.png) no-repeat center center/cover;
   padding: 60px 40px 60px;
 }
 
@@ -1651,7 +1651,7 @@ img {
 }
 
 .contact .contact-head {
-  background: transparent url(../../img/contact1.png) no-repeat center center/cover;
+  background: transparent url(../img/contact1.png) no-repeat center center/cover;
   padding: 55px 16px;
   border-radius: 12px 12px 0 0;
 }
