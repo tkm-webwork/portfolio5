@@ -1,0 +1,97 @@
+.top {
+  height: 648px;
+  background: transparent url(../../img/mv.png) no-repeat center left / cover;
+
+  @include mq('tab') {
+    padding-left: $padding-tab;
+    padding-right: $padding-tab;
+  }
+
+  @include mq('sp') {
+    height: 667px;
+    padding-left: $padding-sp;
+    padding-right: $padding-sp;
+    background: transparent url(../../img/mv.png) no-repeat 22% center / cover;
+  }
+
+  .top-inner {
+    width: $layout-width-inner;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .top-cont {
+    width: 600px;
+    max-width: 100%;
+    margin-left: auto;
+    padding-top: 228px;
+
+    @include mq('sp') {
+      padding-top: 221px;
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+
+  .top-title {
+    font-size: 3.2rem;
+    letter-spacing: 0.006666666em;
+    font-weight: bold;
+    line-height: (48 / 32);
+
+    @include mq('sp') {
+      font-size: 2.4rem;
+      line-height: (40 / 24);
+    }
+  }
+
+  .top-lead {
+    font-size: 1.8rem;
+    letter-spacing: 0.025em;
+    line-height: (28 / 18);
+    font-weight: bold;
+    margin-top: 27px;
+
+    @include mq('sp') {
+      font-size: 1.4rem;
+      margin-top: 22px;
+      line-height: (20 / 14);
+      letter-spacing: 0;
+    }
+  }
+
+  .top-button {
+    margin-top: 38px;
+
+    @include mq('sp') {
+      margin-top: 28px;
+      text-align: center;
+    }
+
+    .top-link {
+      color: cl(white);
+      font-size: 1.8rem;
+      font-weight: bold;
+      letter-spacing: 0.025em;
+      width: 282px;
+      max-width: 100%;
+      text-align: center;
+      border-radius: 10px;
+      box-shadow: 0 3px 5px rgba(62, 62, 62, 0.2);
+      display: inline-block;
+      background-color: cl(button);
+      padding: 12px;
+      transition: background-color 0.3s ease 0s;
+
+      @include mq('sp') {
+        width: 222px;
+        font-size: 1.6rem;
+        letter-spacing: 0;
+      }
+
+      &:hover {
+        background-color: cl(hover);
+      }
+    }
+  }
+}

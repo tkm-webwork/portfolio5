@@ -1,0 +1,147 @@
+.news {
+  margin-top: 120px;
+
+  @include mq('sp') {
+    margin: -40px 16px 0;
+  }
+
+  .news-inner {
+    width: $layout-width-inner;
+    max-width: 100%;
+    margin: 0 auto;
+    background: cl(white);
+    padding: 55px 60px 40px;
+    box-shadow: 0 5px 12px rgba(62, 62, 62, 0.2);
+
+    @include mq('sp') {
+      padding: 36px 0 40px;
+    }
+  }
+
+  .section-title {
+    text-align: center;
+  }
+
+  .news-cont {
+    margin-top: 55px;
+
+    @include mq('sp') {
+      margin-top: 36px;
+    }
+  }
+
+  .news-list {
+    border-top: 1px solid #CECDCD;
+  }
+
+  .news-item {
+    border-bottom: 1px solid #CECDCD;
+
+    a {
+      display: flex;
+      align-items: center;
+      font-size: 1.8rem;
+      letter-spacing: 0.025em;
+      padding: 32px 83px 40px 0;
+      transition: background-color 0.3s ease 0s;
+      position: relative;
+
+      @include mq('sp') {
+        padding: 4px 50px 12px 16px;
+      }
+
+      &:hover {
+        background-color: rgba(73, 115, 255, 0.1);
+      }
+
+      @include mq('sp') {
+        display: block;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        background: transparent url(../../img/news-arrow.png) no-repeat center center / contain;
+        width: 22px;
+        height: 24px;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  .news-info {
+    display: flex;
+    flex: 0 0 299px;
+    margin-top: 10px;
+
+    @include mq('sp') {
+      flex: 0 0 100%;
+    }
+  }
+
+  .news-date {
+    @include Montserrat;
+    font-weight: 400;
+    flex: 0 0 138px;
+    letter-spacing: 0.025em;
+
+    @include mq('sp') {
+      font-size: 1.4rem;
+      flex: 0 0 100px;
+    }
+  }
+
+  .news-label {
+    font-size: 1.4rem;
+    display: inline-block;
+    border: 2px solid cl(blue);
+    border-radius: 50px;
+    padding: 0 30px;
+    line-height: 1.8;
+    letter-spacing: 0.025em;
+    background: cl(white);
+
+
+    @include mq('sp') {
+      font-size: 1.2rem;
+      padding: 0 14px;
+      line-height: 1.4;
+    }
+  }
+
+  .news-text {
+    line-height: (28 / 18);
+
+    @include mq('sp') {
+      font-size: 1.4rem;
+      line-height: (20 / 14);
+      margin-top: 9px;
+      letter-spacing: 0em;
+    }
+  }
+
+  .news-button {
+    text-align: center;
+    padding: 0 16px;
+
+    .more-link {
+      width: 236px;
+      max-width: 100%;
+      margin: 37px 0 0;
+
+      &:hover {
+        background: cl(text);
+        color: cl(white);
+      }
+
+
+      @include mq('sp') {
+        width: 268px;
+        max-width: 100%;
+        margin-top: 37px;
+      }
+    }
+  }
+}

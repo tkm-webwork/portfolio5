@@ -1,0 +1,135 @@
+.faq {
+  margin-top: 120px;
+  padding: 55px 0 120px;
+  background: url(../../img/qa-bg.png) fixed no-repeat center center / cover;
+  position: relative;
+  z-index: index(default);
+
+  @include mq('sp') {
+    margin-top: 60px;
+    padding: 36px 0 60px;
+  }
+
+  .faq-inner {
+    width: $layout-width-inner;
+    max-width: 100%;
+    margin: 0 auto;
+
+    @include mq('sp') {
+      padding-left: $padding-sp;
+      padding-right: $padding-sp;
+    }
+  }
+
+  .section-title {
+    text-align: center;
+  }
+
+  .faq-items {
+    width: 612px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-top: 55px;
+
+    @include mq('sp') {
+      margin: 36px auto 0;
+    }
+  }
+
+  .faq-item {
+    border-radius: 4px;
+    background: cl(white);
+    padding: 0 16px;
+
+    &:first-child,
+    &:nth-child(2) {
+      .faq-body {
+        display: block;
+      }
+    }
+
+    &:nth-child(n + 2) {
+      margin-top: 31px;
+
+      @include mq('sp') {
+        margin-top: 24px;
+      }
+    }
+  }
+
+  .faq-head {
+    font-weight: bold;
+    letter-spacing: 0.025em;
+    padding: 16px 0 16px 40px;
+    position: relative;
+
+    &::after {
+      content: "Q";
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      background: #3B69FF;
+      border-radius: 50%;
+      @include Montserrat;
+      text-align: center;
+      color: cl(white);
+      font-weight: 600;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+    }
+  }
+
+  .faq-icon {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &.is-open {
+      .faq-bar2 {
+        transform: rotate(90deg);
+      }
+    }
+
+    .faq-bar1 {
+      width: 16px;
+      height: 3px;
+      background: #3B69FF;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .faq-bar2 {
+      width: 3px;
+      height: 16px;
+      background: #3B69FF;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 0;
+      transition: all .3s ease 0s;
+    }
+  }
+
+  .faq-body {
+    display: none;
+    border-radius: 4px;
+    padding-bottom: 16px;
+
+    .faq-bodyText {
+      background: rgba(59, 105, 255, 0.2);
+      padding: 12px 16px;
+      line-height: (24 / 16);
+
+      @include mq('sp') {
+        font-size: 1.4rem;
+        padding: 8px 12px 6px;
+      }
+    }
+  }
+}

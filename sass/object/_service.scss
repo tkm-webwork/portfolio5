@@ -1,0 +1,122 @@
+.service {
+  margin-top: 120px;
+  background: linear-gradient(to bottom, cl(text) 0, cl(text) 400px, transparent 400px, transparent 100%);
+  padding-top: 54px;
+
+  @include mq('sp') {
+    margin-top: 60px;
+    padding-top: 36px;
+    background: linear-gradient(to bottom, cl(text) 0, cl(text) 480px, transparent 480px, transparent 100%);
+  }
+
+  .service-inner {
+    padding-right: $padding-pc;
+    padding-left: $padding-pc;
+
+    @include mq('sp') {
+      padding-right: $padding-sp;
+      padding-left: $padding-sp;
+    }
+  }
+
+  .section-title {
+    text-align: center;
+    color: cl(white);
+  }
+
+  .service-cont {
+    margin-top: 54px;
+
+    @include mq('sp') {
+      margin-top: 36px;
+    }
+  }
+
+  .service-list {
+    width: 960px;
+    max-width: 100%;
+    margin: 0 auto;
+    box-shadow: 0 5px 12px rgba(62, 62, 62, 0.2);
+    display: flex;
+    justify-content: space-between;
+    background: cl(white);
+    padding: 78px 45px 58px;
+
+    @include mq('sp') {
+      display: block;
+      padding: 55px 16px 36px;
+    }
+  }
+
+  .service-item {
+    width: calc(33.3333333% - 90px * 2 / 3);
+
+    &:first-child {
+      .service-itemHead {
+
+        .service-itemPicture {
+          margin-top: -5px;
+        }
+
+        .service-itemTitle {
+          margin-top: 15px;
+
+          @include mq('sp') {
+            margin-top: 18px;
+          }
+        }
+      }
+    }
+
+
+    @include mq('sp') {
+      width: 100%;
+
+      &:nth-child(n + 2) {
+        margin-top: 50px;
+
+        @include mq('sp') {
+          margin-top: 53px;
+        }
+      }
+    }
+  }
+
+  .service-itemHead {
+    display: flex;
+    flex-flow: column-reverse;
+
+    .service-itemPicture {
+      width: 50px;
+      margin: 0 auto;
+
+      img {
+        display: block;
+      }
+    }
+
+    .service-itemTitle {
+      font-size: 2rem;
+      @include Montserrat;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      line-height: (28 / 20);
+      text-align: center;
+      margin-top: 22px;
+
+      @include mq('sp') {
+        line-height: (24 / 20);
+      }
+    }
+  }
+
+  .service-itemText {
+    font-size: 1.4rem;
+    line-height: (24 / 14);
+    margin-top: 14px;
+
+    @include mq('sp') {
+      margin-top: 15px;
+    }
+  }
+}

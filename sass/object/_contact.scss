@@ -1,0 +1,479 @@
+.contact {
+  margin-top: 120px;
+  background: transparent url(../../img/contact-bg.png) no-repeat center center / cover;
+  padding: 60px 40px 60px;
+
+  @include mq('sp') {
+    padding: 40px 16px;
+    margin-top: 0;
+  }
+
+  .contact-inner {
+    width: 960px;
+    max-width: 100%;
+    margin: 0 auto;
+    border-radius: 12px;
+    background: cl(white);
+  }
+
+  .contact-head {
+    background: transparent url(../../img/contact1.png) no-repeat center center / cover;
+    padding: 55px 16px;
+    border-radius: 12px 12px 0 0;
+
+    @include mq('sp') {
+      padding: 36px 16px;
+    }
+  }
+
+  .section-title {
+    color: cl(white);
+    text-align: center;
+  }
+
+  .contact-text {
+    text-align: center;
+    color: cl(white);
+    margin-top: 7px;
+
+    @include mq('sp') {
+      text-align: left;
+      font-size: 1.4rem;
+      line-height: (20 / 14);
+    }
+  }
+
+  .contact-form {
+    padding: 60px 120px;
+
+    @include mq('sp') {
+      padding: 30px 12px 39px;
+    }
+  }
+
+  .contact-item {
+    display: flex;
+    align-items: center;
+
+    @include mq('sp') {
+      display: block;
+    }
+
+    &:nth-child(n + 2) {
+      margin-top: 25px;
+
+      @include mq('sp') {
+        margin-top: 27px;
+      }
+    }
+  }
+
+  .contact-title {
+    flex: 0 0 188px;
+    font-weight: bold;
+    position: relative;
+    margin-top: 7px;
+
+    @include mq('sp') {
+      width: 100%;
+    }
+
+    .is-required {
+      width: 40px;
+      height: 16px;
+      line-height: 16px;
+      display: inline-block;
+      color: cl(white);
+      font-size: 1.2rem;
+      font-weight: bold;
+      background: cl(primary);
+      border-radius: 2px;
+      text-align: center;
+      margin-left: 12px;
+
+      @include mq('sp') {
+        margin-left: 20px;
+      }
+    }
+  }
+
+
+  .contact-select {
+    flex: 0 1 178px;
+    position: relative;
+
+    &::after {
+      border-bottom: solid 2px cl(text);
+      border-right: solid 2px cl(text);
+      content: '';
+      display: block;
+      height: 8px;
+      position: absolute;
+      right: 16px;
+      top: 14px;
+      transform: rotate(45deg);
+      width: 8px;
+
+      @include mq('sp') {
+        top: 24px;
+      }
+    }
+
+    select {
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      appearance: none;
+      border: 1px solid #707070;
+      border-radius: 0;
+      color: cl(text);
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 1em;
+      padding: 0.7em 0.7em;
+      max-width: 100%;
+      width: 178px;
+      box-shadow: none;
+      transition: box-shadow 0.3s ease 0s;
+
+      &:hover {
+        box-shadow: 0 0 5px rgba(73, 115, 255, 0.5);
+      }
+
+      &:focus {
+        outline: none;
+        box-shadow: 0 0 5px rgba(73, 115, 255, 0.5);
+      }
+
+      @include mq('sp') {
+        width: 100%;
+        margin-top: 12px;
+        padding: 0.8em 0.7em;
+        font-size: 1.4rem;
+      }
+    }
+
+    option {
+      &:first-child {
+        display: none;
+      }
+    }
+  }
+
+  .contact-input {
+    flex: 0 1 100%;
+
+    input[type="text"],
+    input[type="email"] {
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      appearance: none;
+      background-color: transparent;
+      background-image: none;
+      border: none;
+      border-bottom: 1px solid rgba(62, 62, 62, 0.2);
+      border-radius: 0;
+      color: rgba(62, 62, 62, 0.5);
+      font-family: inherit;
+      font-size: 1em;
+      box-shadow: none;
+      padding: 0.4em 0.8em;
+      width: 100%;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      transition: all 0.3s ease 0s;
+
+      &:hover {
+        border-bottom: 1px solid #4973FF;
+        box-shadow: 0px 6px 6px -6px rgba(73, 115, 255, 0.5);
+      }
+
+      @include mq('sp') {
+        padding: 0;
+        max-width: 100%;
+        margin-top: 10px;
+        font-size: 1.4rem;
+      }
+
+      &:focus {
+        border-bottom: 1px solid #4973FF;
+        box-shadow: 0px 6px 6px -6px rgba(73, 115, 255, 0.5);
+        outline: none;
+      }
+    }
+  }
+
+  .contact-itemTextArea {
+    display: block;
+    margin-top: 22px;
+  }
+
+  .contact-textarea {
+    width: 100%;
+    margin-top: 3px;
+
+    @include mq('sp') {
+      margin-top: 8px;
+    }
+
+    textarea {
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      appearance: none;
+      background-color: transparent;
+      background-image: none;
+      border: 1px solid #707070;
+      border-radius: 0;
+      color: inherit;
+      font-family: inherit;
+      font-size: 1em;
+      height: 200px;
+      resize: vertical;
+      padding: 0.4em 0.8em;
+      width: 100%;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      transition: all 0.3s ease 0s;
+
+      @include mq('sp') {
+        height: 160px;
+      }
+
+      &:hover {
+        border-color: #4973FF;
+        box-shadow: 0 0 8px rgba(73, 115, 255, 0.5);
+      }
+
+      &:focus {
+        border-color: #4973FF;
+        box-shadow: 0 0 8px rgba(73, 115, 255, 0.5);
+        outline: none;
+      }
+    }
+  }
+
+  .contact-radio-wrap {
+    display: flex;
+
+    @include mq('sp') {
+      margin-top: 9px;
+    }
+  }
+
+  .contact-radio {
+    &:nth-child(n + 2) {
+      margin-left: 40px;
+
+    }
+
+    input[type="radio"] {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      visibility: hidden;
+
+      &:checked+.contact-radioLabel::after {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    .contact-radioLabel {
+      padding-left: 20px;
+      position: relative;
+
+      &:hover {
+        &::before {
+          border-color: #3B69FF;
+          box-shadow: 0 0 6px rgba(73, 115, 255, 0.2);
+        }
+      }
+
+      &:active {
+        &::before {
+          box-shadow: none;
+          background-color: rgba(73, 115, 255, 0.2);
+        }
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 12px;
+        height: 12px;
+        top: 3px;
+        left: 0;
+        background: #fff;
+        border: solid 1px #3e3e3e;
+        border-radius: 50%;
+        transition: all 0.3s ease 0s;
+
+        @include mq('sp') {
+          top: 2px;
+        }
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        top: 6px;
+        left: 3px;
+        opacity: 0;
+        transition: all 0.3s ease 0s;
+        background-color: #3B69FF;
+
+        @include mq('sp') {
+          top: 5px;
+        }
+      }
+    }
+  }
+
+  .contact-privacy {
+    margin-top: 31px;
+    display: inline-block;
+
+    @include mq('sp') {
+      margin-top: 24px;
+    }
+
+    input[type="checkbox"] {
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      visibility: hidden;
+
+      &:checked+.contact-checkboxLabel::after {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    .contact-checkboxLabel {
+      cursor: pointer;
+      display: block;
+      padding-left: 40px;
+      position: relative;
+      font-weight: bold;
+      font-size: 1.8rem;
+
+      &:hover {
+        &::before {
+          border-color: #3B69FF;
+          box-shadow: 0 0 6px rgba(73, 115, 255, 0.2);
+        }
+      }
+
+      &:active {
+        &::before {
+          box-shadow: none;
+          background-color: rgba(73, 115, 255, 0.2);
+        }
+      }
+
+      @include mq('sp') {
+        font-size: 1.6rem;
+        padding-left: 38px;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        background: cl(white);
+        border: solid 1px cl(text);
+        display: block;
+        left: 0;
+        top: 3px;
+        transition: 0.2s;
+        width: 20px;
+        height: 20px;
+
+        @include mq('sp') {
+          width: 18px;
+          height: 18px;
+        }
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        border-bottom: solid 2px #4973ff;
+        border-left: solid 2px #4973ff;
+        display: block;
+        opacity: 0;
+        transform: rotate(-45deg);
+        transition: 0.2s;
+        top: 8px;
+        left: 4px;
+        width: 12px;
+        height: 6px;
+
+        @include mq('sp') {
+          left: 3px;
+        }
+      }
+    }
+  }
+
+  .contact-submit {
+    margin-top: 36px;
+
+    @include mq('sp') {
+      text-align: center;
+      margin-top: 31px;
+    }
+
+    .contact-button {
+      width: 173px;
+      max-width: 100%;
+      -webkit-appearance: none;
+      background-color: #B2B2B2;
+      background-image: none;
+      border: none;
+      border-radius: 10px;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+      display: inline-block;
+      box-shadow: 0 3px 5px rgba(62, 62, 62, 0.2);
+      font-size: 1.8rem;
+      letter-spacing: 0.025em;
+      margin: 0;
+      padding: 0.65em 2em;
+      text-decoration: none;
+      transition: background-color 0.3s ease 0s;
+
+      @include mq('sp') {
+        width: 165px;
+        padding: 0.75em 2em;
+        font-size: 1.6rem;
+      }
+
+      &.-active {
+        background-color: cl(button);
+
+        &:hover {
+          background-color: cl(hover);
+        }
+      }
+
+      &:hover,
+      &:focus {
+        outline: none;
+      }
+
+      &::-moz-focus-inner {
+        border: none;
+        padding: 0;
+      }
+    }
+  }
+}

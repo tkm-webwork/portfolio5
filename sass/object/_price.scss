@@ -1,0 +1,88 @@
+.price {
+  margin-top: 115px;
+
+  @include mq('sp') {
+    margin-top: 36px;
+  }
+
+  .price-inner {
+    padding-left: $padding-tab;
+    padding-right: $padding-tab;
+
+    @include mq('sp') {
+      padding-left: $padding-sp;
+      padding-right: $padding-sp;
+    }
+  }
+
+  .section-title {
+    text-align: center;
+  }
+
+  .price-cont {
+    width: 960px;
+    max-width: 100%;
+    margin: 57px auto 0;
+    overflow-x: auto;
+
+    @include mq('sp') {
+      margin: 35px auto 0;
+    }
+  }
+
+  .price-table {
+    table-layout: fixed;
+    border-collapse: collapse;
+    border: 1px solid #707070;
+    width: 100%;
+
+    tr {
+      border: 1px solid #707070;
+      height: 60px;
+
+      @include mq('sp') {
+        height: 55px;
+      }
+    }
+
+    th {
+      border: 1px solid #707070;
+      width: 27.2916666%;
+      text-align: center;
+      color: cl(white);
+      background: cl(text);
+      font-size: 2.4rem;
+      font-weight: 600;
+      vertical-align: middle;
+      @include Montserrat;
+
+      @include mq('sp') {
+        font-size: 2rem;
+        width: 29.154518%;
+      }
+    }
+
+    td {
+      font-size: 2.4rem;
+      background: cl(white);
+      font-weight: 600;
+      padding-left: 40px;
+      vertical-align: middle;
+      @include Montserrat;
+
+      @include mq('sp') {
+        padding: 12px 19px;
+        font-size: 2rem;
+      }
+    }
+  }
+
+  .price-text {
+    font-size: 1.2rem;
+    margin-top: 9px;
+
+    @include mq('sp') {
+      margin-top: 5px;
+    }
+  }
+}
